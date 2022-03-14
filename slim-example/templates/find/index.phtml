@@ -1,0 +1,13 @@
+<form action="/courses" method="get">
+    <input type="search" name="term" value="<?= htmlspecialchars($term) ?>" />
+    <input type="submit" value="Search" />
+</form>
+
+<?php foreach ($findString as $find): ?>
+<?=$find ?>
+<?php endforeach ?>
+
+<?php foreach ($positive as $pos): ?>
+    <?=$pos ?>
+<?php endforeach ?>
+
