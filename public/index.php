@@ -1,6 +1,4 @@
+<h1>hello, php!</h1>
 <?php
-foreach($_SERVER as $myarr)
-{
-  echo $myarr."<br />";
-}
+  echo "<h1>i am from PHP!</h1>";
 ?>
