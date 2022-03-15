@@ -1,13 +1,9 @@
 <?php
-require __DIR__ . '/../vendor/autoload.php';
 use Slim\Factory\AppFactory;
-use DI\Container;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
 
-$container = new Container();
-$container->set('renderer', function () {
-    // Параметром передается базовая директория, в которой будут храниться шаблоны
-    return new \Slim\Views\PhpRenderer(__DIR__ . '/../templates');
-});
+require 'vendor/autoload.php';
 
 
 
@@ -17,19 +13,33 @@ $app = AppFactory::create();
 // Метод `setName` задаёт имя маршрута. Затем это имя используется для формирования нужного адреса. Ниже пример того как это сделать:
 
 
-$app->get('/hello', function ($request, $response) {
-})->setName('helloS');
+$app->get('/404', function ($request, $response) {
 
-$app->get('/bye', function ($request, $response) {
-})->setName('byeS');
+    return $response->withStatus(404)->withHeader('Content-Type', 'text/h2tsssssml')  ;
+
+
+})->setName('notfound');
 
 $router = $app->getRouteCollector()->getRouteParser();
 
-$router->urlFor('helloS');
-
 
 $app->get( '/', function ($request, $response) use ($router) {
-    return $response->withRedirect( $router->urlFor('byeS'));
+    return $response->withRedirect( $router->urlFor('notfound'));
+
+});
+
+$app->get( '/name/{name}', function ($request, $response, $args ) use($router) {
+        $name = $args['name'];
+        $array = explode("\n", file_get_contents('names'));
+        $search = array_search($name, $array);
+       if ($name == $array[$search]){
+
+           return $response->write($name . ' Найдено');
+       }else{
+        return $response->withRedirect( $router->urlFor('notfound'));
+       }
+
+
 });
 
 
