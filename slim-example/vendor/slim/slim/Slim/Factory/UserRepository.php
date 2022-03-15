@@ -1,6 +1,7 @@
 <?php
 
-namespace Slim\Factory\Psr17;
+namespace Slim\Factory;
+
 
 class UserRepository
 {
