@@ -1,0 +1,24 @@
+<!-- templates/users/new.phtml -->
+<form action="/users" method="post">
+       <div>
+        <label>
+            Email
+            <input type="name" required name="user[name]" value="<?= htmlspecialchars($user['name']) ?>">
+        </label>
+        <?php if (isset($errors['name'])): ?>
+            <div><?= $errors['name'] ?></div>
+        <?php endif ?>
+    </div>
+    <div>
+        <label>
+            Пароль
+            <input type="password" required name="user[password]" value="<?= htmlspecialchars($user['password']) ?>">
+        </label>
+        <?php if (isset($errors['password'])): ?>
+            <div><?= $errors['password'] ?></div>
+        <?php endif ?>
+    </div>
+
+
+    <input type="submit" value="Sign Up">
+</form>
