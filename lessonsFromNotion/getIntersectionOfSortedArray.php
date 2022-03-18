@@ -10,7 +10,7 @@
                     {
                         echo $firstArray[$i].'<br>';
                     }
-                }
+                 }
             }
     }
 

@@ -20,4 +20,4 @@ function result($inputText)
     var_dump($difference);
 
 }
-result($inputText);
+ result($inputText);
