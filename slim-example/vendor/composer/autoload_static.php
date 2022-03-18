@@ -39,6 +39,7 @@ class ComposerStaticInit44c27298e0419c1c94043793164ff362
             'Slim\\Views\\' => 11,
             'Slim\\Psr7\\' => 10,
             'Slim\\Http\\' => 10,
+            'Slim\\Flash\\' => 11,
             'Slim\\' => 5,
             'Sapphirecat\\Slim4HttpInteropAdapter\\' => 36,
         ),
@@ -103,6 +104,10 @@ class ComposerStaticInit44c27298e0419c1c94043793164ff362
         'Slim\\Http\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/http/src',
+        ),
+        'Slim\\Flash\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/flash/src',
         ),
         'Slim\\' => 
         array (

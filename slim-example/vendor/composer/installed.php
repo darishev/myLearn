@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c2cbce1c4a74207ef2a945ae929b0b70ffb713a4',
+        'reference' => '9420c9d79be8f46be45b1375a4467c6d49285247',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c2cbce1c4a74207ef2a945ae929b0b70ffb713a4',
+            'reference' => '9420c9d79be8f46be45b1375a4467c6d49285247',
             'dev_requirement' => false,
         ),
         'fig/http-message-util' => array(
@@ -216,6 +216,15 @@
             'install_path' => __DIR__ . '/../sapphirecat/slim4-http-interop-adapter',
             'aliases' => array(),
             'reference' => '2e3f5fd22e4d8edf5fb711aefd5391a86f8508a0',
+            'dev_requirement' => false,
+        ),
+        'slim/flash' => array(
+            'pretty_version' => '0.4.0',
+            'version' => '0.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../slim/flash',
+            'aliases' => array(),
+            'reference' => '9aaff5fded3b54f4e519ec3d4ac74d3d1f2cbbbc',
             'dev_requirement' => false,
         ),
         'slim/http' => array(

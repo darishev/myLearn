@@ -29,5 +29,4 @@ $app->get( '/', function ($request, $response) use ($router) {
            }
     });
 
-
 $app->run();

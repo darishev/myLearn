@@ -1,11 +1,70 @@
-Tiara
-Allan
-Ansley
-Jamya
-Abraham
-Vance
-Gustavo
-Ayla asdasd
-Brooklyn
-Davin
-Cassie
+<?php
+
+class user
+{
+    public $name = "name";
+    public $password= "pass";
+    public $email= "mail";
+    public $city= "city";
+
+
+    private static $name;
+    public static function setName($name1)
+    {
+        self::$name = $name1;
+    }
+
+    public static function getName()
+    {
+        return self::$name;
+
+    }
+
+
+
+
+}
+
+User::setName('ivan');
+echo User::getName();
+
+
+class testP
+{
+    public static $name;
+    public static function hello(){
+        echo "Hello" .self::$name."";
+    }
+}
+
+testP::$name="Alexey";
+echo testP::$name;
+testP::hello();
+
+
+interface firstInt{
+    public function getName();
+
+}
+
+interface secInt{
+    public function getStatus();
+
+}
+
+class Test implements firstInt{
+    public $name = "Alex";
+    public $status = "Alex";
+    public function getName()
+    {
+        // TODO: Implement getName() method.
+        echo $this->name;
+    }
+    public function getName()
+    {
+        // TODO: Implement getName() method.
+        echo $this->status;
+    }
+
+}
+
